@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bookings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="main">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>Hotel</h2>
+        <ul>
+            <li onclick="goDashboard()">🏠 Dashboard</li>
+            <li onclick="goBooking()">📅 Bookings</li>
+            <li onclick="logout()">🚪 Logout</li>
+        </ul>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+
+        <!-- Header -->
+        <div class="header">
+            <h2>Booking Management</h2>
+        </div>
+
+        <!-- Search -->
+        <div class="search-box">
+            <input type="text" id="search" placeholder="🔍 Search by customer name..." onkeyup="searchBooking()">
+        </div>
+
+        <!-- Booking Form -->
+        <div class="form-card">
+            <h3>Add New Booking</h3>
+            <form id="form">
+                <div class="form-row">
+                    <input type="text" id="name" placeholder="Customer Name">
+                    <input type="number" id="room" placeholder="Room Number">
+                </div>
+
+                <div class="form-row">
+                    <input type="date" id="in">
+                    <input type="date" id="out">
+                </div>
+
+                <button>Add Booking</button>
+            </form>
+        </div>
+
+        <!-- Table -->
+        <div class="table-card">
+            <h3>Booking List</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Room</th>
+                        <th>Check-in</th>
+                        <th>Check-out</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="list"></tbody>
+            </table>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
