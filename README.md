@@ -1,1 +1,1 @@
-# WAD_Practical
+# TEIT Semester 6
